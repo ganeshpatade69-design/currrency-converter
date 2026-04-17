@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Converter App</h1>
+
+<div class="menu">
+    <button onclick="showSection('temp')">Temperature</button>
+    <button onclick="showSection('weight')">Weight</button>
+    <button onclick="showSection('currency')">Currency</button>
+</div>
+
+<!-- TEMPERATURE -->
+<div id="temp" class="hidden">
+    <h2>Temperature Converter App</h2>
+
+    From:
+    <input type="radio" name="tfrom" value="C"> Celsius
+    <input type="radio" name="tfrom" value="K"> Kelvin
+    <input type="radio" name="tfrom" value="F"> Fahrenheit
+
+    <br><br>
+    <input type="number" id="tempInput" placeholder="Enter Temperature">
+
+    <br><br>
+    To:
+    <input type="radio" name="tto" value="C"> Celsius
+    <input type="radio" name="tto" value="K"> Kelvin
+    <input type="radio" name="tto" value="F"> Fahrenheit
+
+    <br><br>
+    <button onclick="convertTemp()">Convert</button>
+    <button onclick="goBack()">Back to Main</button>
+
+    <h3 id="tempResult"></h3>
+</div>
+
+<!-- WEIGHT -->
+<div id="weight" class="hidden">
+    <h2>Weight Converter App</h2>
+
+    From:
+    <input type="radio" name="wfrom" value="kg"> Kg
+    <input type="radio" name="wfrom" value="lb"> Lbs
+    <input type="radio" name="wfrom" value="g"> Grams
+    <input type="radio" name="wfrom" value="t"> Tons
+
+    <br><br>
+    <input type="number" id="weightInput" placeholder="Enter Weight">
+
+    <br><br>
+    To:
+    <input type="radio" name="wto" value="kg"> Kg
+    <input type="radio" name="wto" value="lb"> Lbs
+    <input type="radio" name="wto" value="g"> Grams
+    <input type="radio" name="wto" value="t"> Tons
+
+    <br><br>
+    <button onclick="convertWeight()">Convert</button>
+    <button onclick="goBack()">Back to Main</button>
+
+    <h3 id="weightResult"></h3>
+</div>
+
+<!-- CURRENCY -->
+<div id="currency" class="hidden">
+    <h2>Live Currency Converter</h2>
+
+    <input type="number" id="amount" placeholder="Enter Amount in ₹">
+
+    <br><br>
+    <input type="radio" name="currency" value="USD"> USD
+    <input type="radio" name="currency" value="SGD"> SGD
+    <input type="radio" name="currency" value="GBP"> GBP
+    <input type="radio" name="currency" value="AUD"> AUD
+
+    <br><br>
+    <button onclick="convertCurrency()">Convert</button>
+    <button onclick="goBack()">Back to Main</button>
+
+    <h3 id="currencyResult"></h3>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
